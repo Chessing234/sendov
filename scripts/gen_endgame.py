@@ -100,6 +100,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Terence Tao
 -/
 import Sendov.LargeDegree.Monotone
+from pathlib import Path
 
 /-!
 # The large-degree claim
@@ -238,6 +239,6 @@ theorem large_degree {{n : ℕ}} (hn : 101 ≤ n) (hα : 0 ≤ α) (hα' : α �
 
 end Sendov
 '''
-io.open(r"c:/Users/teort/Github/sendov/Sendov/LargeDegree/Endgame.lean", "w",
+io.open(Path(__file__).resolve().parents[1] / "Sendov" / "LargeDegree" / "Endgame.lean", "w",
         encoding="utf-8", newline="\n").write(src)
 print(f"written Endgame.lean, {len(src)} bytes")

@@ -83,6 +83,7 @@ import Mathlib.Analysis.SpecialFunctions.Log.Deriv
 import Mathlib.Analysis.SpecialFunctions.Sqrt
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
 import Mathlib.Analysis.Calculus.MeanValue
+from pathlib import Path
 
 /-!
 # `log (sinh h / h) ≤ √(h² + 9) - 3`
@@ -262,6 +263,6 @@ end Sendov
 # f-string would swallow, so it is kept beside this script rather than inlined.
 src = src.replace("\nend Sendov\n", "\n") + io.open(
     "sinh_tail.lean.txt", encoding="utf-8").read()
-io.open(r"c:/Users/teort/Github/sendov/Sendov/Common/Sinh.lean", "w",
+io.open(Path(__file__).resolve().parents[1] / "Sendov" / "Common" / "Sinh.lean", "w",
         encoding="utf-8", newline="\n").write(src)
 print(f"written Sinh.lean, {len(src)} bytes")
