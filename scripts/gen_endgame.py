@@ -1,4 +1,5 @@
 import sympy as sp, io
+from pathlib import Path
 
 a = sp.symbols('a')
 g = 300 + 47*a - a**2
@@ -100,7 +101,6 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Terence Tao
 -/
 import Sendov.LargeDegree.Monotone
-from pathlib import Path
 
 /-!
 # The large-degree claim
